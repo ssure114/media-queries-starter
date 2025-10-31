@@ -305,10 +305,33 @@ p{
     - adjust the ul in the nav to justify the items in it with space between
     - adjust the list items in the navigation so that they each have a flex basis of 20% 
 */
+@media  screen and (min-width: 550px) {
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
 
-    /* h1{
+    header>a{
+        margin: 0;
+        flex-basis: 15%;
+    }
+    h1{
         margin: 0;
         font-size: 2.75rem;
+    }
+
+    nav{
+        flex-basis: 100%;
+    }
+
+    nav ul{
+        justify-content: space-between;
+    }
+    nav li{
+    flex-basis: 20%;
     }
 
     #section1{
@@ -317,8 +340,9 @@ p{
 
     #section1 div{
         border: none;
-    } */
-
+    } 
+ 
+}
 
 /* TO DO: Add the second media query here */
 /* 
@@ -335,13 +359,36 @@ p{
     -  adjust h2 headings in sections 2 and 3 to give them a flex basis of 100%
     - for the paragraphs in the last section, set their flex basis to 30%
 */
-
-    /* h1{
+@media screen and (min-width: 700px){
+    header{
+        flex-wrap: nowrap;
+        padding: 3rem 1rem 2rem;
+    }
+    header>a{
+        padding: 0;
+        flex-basis: 0;
+    }
+   h1{
         font-size: 2.2rem;
+    }
+    nav {
+        flex-basis: 60%;
     }
 
     #section2{
         border-bottom: 8px solid var(--gray);
         border-top: 8px solid var(--gray);
         margin: 2rem auto 1rem;
-    } */
+    } 
+    #section2, #section3{
+      display: flex;
+      flex-wrap: wrap;  
+    }
+     #section2 h2, #section3 h2{
+        flex-basis: 100%; 
+        }
+        #section p{
+            flex-basis: 30%;
+        }
+}
+   
